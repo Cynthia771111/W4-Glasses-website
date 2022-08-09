@@ -7,14 +7,16 @@
 	}
 	.per-question-and-answer {
 		margin-bottom: 32px;
-		h3 {
+		h2 {
 			font-size: 20px;
 			line-height: 30px;
 			font-weight: 700;
 			margin-bottom: 8px;
+			text-align: left;
+			color:#000;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		.per-question-and-answer {
 			margin-bottom: 24px;
 		}

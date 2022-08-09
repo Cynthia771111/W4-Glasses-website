@@ -10,18 +10,11 @@ body {
 }
 
 .container {
-	max-width: 1440px;
-	padding:80px 5%;
+	max-width: 1320px;
+	padding:80px 12px;
 	margin: 0 auto;
-	@media (max-width:1440px) {
-		padding:80px 10%;
-	}
-	@media (max-width:992px) {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-	@media (max-width:767px) {
-		padding:40px 5%;
+	@include phone{
+		padding:40px 12px;
 	}
 }
 
@@ -76,7 +69,7 @@ body {
 			color: #fff;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		.per-page,.back,.next {
 			font-size: 16px;
 			line-height: 24px;
@@ -94,7 +87,7 @@ body {
 	}
 	.filters {
 		display: flex;
-		@media (max-width:1200px) {
+		@include laptop{
 			flex-direction: column;
 		}
 	}
@@ -117,13 +110,13 @@ body {
 			color: #495057;
 		}
 	}
-	@media (max-width:1200px) {
+	@include laptop{
 		.filter-store-name {
 			margin-top: -32px;
 			margin-left: 64px;
 		}
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.filter {
 			select {
 				width: 200px;
@@ -139,12 +132,12 @@ h1,h2 {
 	margin-bottom: 48px;
 	text-align: center;
 	color: $primary-color;
-	@media (max-width:992px) {
+	@include pad{
 		font-size: 40px;
 		line-height: 60px;
 		margin-bottom: 40px;
 	}
-	@media (max-width:767px) {
+	@include phone{
 		font-size: 24px;
 		line-height: 36px;
 		margin-bottom: 24px;	
@@ -191,12 +184,12 @@ p {
 		display: block;
 		text-align: center;
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.per-page {
 			margin-left: 24px;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		padding-bottom: 0;
 		.container {
 			flex-direction: column;
@@ -287,7 +280,7 @@ p {
 			text-decoration: underline;
 		}
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.footer-menu {
 			margin-right: -24px;
 		}
@@ -299,7 +292,7 @@ p {
 			margin-left: 22px;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		padding-top: 24px;
 		padding-bottom: 24px;
 		.footer-contact {

@@ -18,7 +18,7 @@
 		color: $primary-color;
 	}
 	.hero-title {
-		font-size: 56px;
+		font-size:64px;
 		line-height: 96px;
 		color: $primary-color;
 		margin-bottom: 10px;
@@ -33,7 +33,7 @@
 			text-decoration: underline;
 		}
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.hero-subtitle {
 			font-size: 24px;
 			line-height: 40px;
@@ -47,7 +47,7 @@
 			padding: 4px 10px;
 		}
 	}
-	@media (max-width:767px){
+	@include phone{
 		.hero {
 			background-image: url(../images/home-header-sm.png);
 		}
@@ -94,7 +94,7 @@
 		margin-bottom: 8px;
 		text-align: center;
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.features {
 			flex-wrap: wrap;
 			margin-bottom: -49px;
@@ -104,7 +104,7 @@
 			margin-bottom: 49px;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		.features {
 			justify-content: center;
 		}
@@ -138,7 +138,7 @@
 		text-align: center;
 		color: $secondary-color;
 	}
-	@media (max-width:1220px) {
+	@include laptop{
 		.classics {
 			flex-wrap: wrap;
 			justify-content: center;
@@ -149,7 +149,7 @@
 			padding-bottom: 24px;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		h3 {
 			font-size: 40px;
 		}
@@ -181,7 +181,7 @@
 		padding: 8px;
 		text-align: center;
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.designs {
 			flex-direction: column;
 			margin-bottom: -24px;
@@ -220,7 +220,7 @@
 	.name {
 		margin-bottom: 8px;
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.recommends {
 			flex-wrap: wrap;
 			margin-bottom: -24px;
@@ -230,7 +230,7 @@
 			margin-bottom: 24px;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		.per-recommend {
 			width: 100%;
 		}
@@ -252,6 +252,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	.contact-input-list {
+		width: 100%;
 	}
 	p {
 		padding-bottom: 24px;
@@ -289,12 +292,12 @@
 		margin-top: 48px;
 		font-size: 16px;
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.contact {
 			width: 80%;
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		.contact {
 			width: 90%;
 		}

@@ -1,13 +1,13 @@
 .container-classics-menu {
 	.container-no-y-padding {
-		@media (max-width:992px) {
+		@include pad{
 			padding: 0;
 		}
 	}
 }
 .classics-menu {
 	.container {
-		padding: 0 5%;
+		padding: 0 12px;
 	}
 	.container-classics-menu {
 		display: flex;
@@ -28,23 +28,13 @@
 		.active {
 			border-bottom: 8px solid $secondary-color;
 		}
-		@media (max-width:767px) {
+		@include phone{
 			.per-page {
 				font-size: 18px;
 			}
 		}
 	}
-	@media (max-width:1440px) {
-		.container {
-			padding:0 10%;
-		}
-	}
-	@media (max-width:992px) {
-		.container {
-			padding:0 5%;
-		}
-	}
-	@media (max-width:767px) {
+	@include phone{
 		.container {
 			padding:0;
 		}
@@ -71,10 +61,10 @@
 		background-size: cover;
 		width: 50%;
 	}
-	@media (max-width:992px) {
+	@include pad{
 		height: 200px;
 	}
-	@media (max-width:767px) {
+	@include phone{
 		height: 136px;
 	}
 }
@@ -105,25 +95,30 @@
 		justify-content: space-between;
 	}
 	.per-item {
-		width: 23%;
+		width:calc((100% - 72px) / 4);
 		margin-bottom: 80px;
 		text-align: center;
 	}
 	.column-3 {
 		width: 30%;
-		@media (max-width: 1200px) {
+		@include laptop{
 			width: 48%;
 		}
 	}
 	.number-and-price {
 		display: flex;
 		justify-content: space-between;
-		.text {
+		h2 {
 			font-size: 24px;
 			line-height: 36px;
+			color: #000;
+			font-weight: 400;
 		}
 		.price {
 			color: $secondary-color;
+			font-size: 24px;
+			line-height: 36px;
+			font-weight: 500;
 		}
 	}
 	.colors {
@@ -141,12 +136,12 @@
 			background: #B75929;
 		}
 	}
-	@media (max-width:1200px) {
+	@include laptop{
 		.per-item {
-			width: 48%;
+			width:calc((100% - 24px) / 2);
 		}
 	}
-	@media (max-width:767px) {
+	@include phone{
 		.title {
 			h1,p{
 				font-size: 24px;
@@ -157,7 +152,7 @@
 			justify-content: center;
 		}
 		.per-item {
-			width: 90%;
+			width: 80%;
 			margin-bottom: 24px;
 			object-fit: cover;			
 			}

@@ -2,7 +2,6 @@
 	.stores {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: flex-start;
 		margin-bottom: -48px;
 		margin-right: -24px;
 	}
@@ -63,7 +62,14 @@
 			line-height: 27px;
 		}
 	}
-	.column-2 {
+	.store-photo {
+		background-image: url(../images/store-1.png);
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 224px;
+	}
+	.layout-with-map {
 		margin-bottom: 0;
 	}
 
@@ -92,7 +98,7 @@
 					border: 1px solid #00000020;
 				}
 			}
-			.column-2 {
+			.layout-with-map {
 				flex-direction: row;
 			}
 			iframe {
@@ -101,7 +107,7 @@
 			}
 		}
 	}
-	@media (max-width:992px) {
+	@include pad{
 		.stores {
 			margin-bottom: -16px;
 			margin-right: 0;
@@ -114,6 +120,19 @@
 		}
 		img {
 			width: 100%;
+		}
+	}
+	@include phone{
+		.per-store-content {
+			.layout-with-map {
+				flex-direction: column;
+			}
+			.per-store {
+				.store-photo,.store-detail {
+					width: 100%;
+				}
+			}
+
 		}
 	}
 }
